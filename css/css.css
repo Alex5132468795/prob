@@ -15,6 +15,10 @@ header, footer{
     height: 10%;
     background: darkgreen;
 }
+header{
+    flex-direction: row;
+    justify-content: space-around;
+}
 main{
     display: flex;
     flex-grow: 1;
@@ -28,6 +32,12 @@ main{
     justify-content: space-around;
 }
 .card{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    overflow: hidden;
+}
+.cardImg{
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
@@ -55,4 +65,35 @@ main{
 }
 .secondImgLeft{
     left:0px;
+}
+.paginButton{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.paginButton>li>a{
+    text-decoration: none;
+    color:black;
+}
+/*forForm*/
+.inputForm:valid, .valid{
+    background-color: green;
+    border-color: green;
+}
+.inputForm:invalid, .noValid{
+    background-color: red;
+    border-color: red;
+}
+/*Regform*/
+.Regist{
+    display: flex;
+    flex-direction: column;
+}
+#avtoris>form{
+    display: flex;
+    flex-direction: column;
+}
+.formButton{
+    display: flex;
+    flex-direction: row;
 }

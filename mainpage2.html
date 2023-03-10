@@ -1,9 +1,51 @@
-            
-        </div>
-    </main>
-    <footer>    
-
-    </footer>
-    <script src="js/js.js"></script>
-</body>
-</html>
+</header>
+<dialog id="registration" close>
+    <form class="Regist" action="">
+        <label for="">
+            ФИО
+        </label>
+        <input class="inputForm" type="text" pattern="[А-ЯЁа-яё ]{0,30}">
+        <label for="">
+            Логин
+        </label>
+        <input id="regLog" class="inputForm" type="text" pattern="[A-Za-z,-]{0,20}">
+        <label for="">
+            Email
+        </label>
+        <input class="inputForm" type="email">
+        <label for="">
+            Пароль
+        </label>
+        <input  class="inputForm RegPas" type="password">
+        <label for="">
+            Повтор пароля
+        </label>
+        <input class="RegPasRet" type="password">
+        <label  for="">
+            Согласие на обработку персональных данных
+        </label>
+        <input type="checkbox" checked>  
+        <div class="formButton">
+            <input type="submit">
+            <input class="closeForm" type="button" value="назад">
+        </div>    
+    </form>
+</dialog>
+<dialog id="avtoris" close>
+    <form action="">
+        <label for="">
+            Логин
+        </label>
+        <input class="inputForm" type="text">
+        <label for="">
+            Пароль
+        </label>
+        <input type="password">
+        <div class="formButton">
+            <input type="submit">
+            <input class="closeForm" type="button" value="назад">
+        </div> 
+    </form>
+</dialog>
+<main>
+    <div class="slaider">
