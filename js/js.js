@@ -48,12 +48,34 @@ buttonReg.addEventListener('click', function(){
 //Open and close form
 //Быстрая проверка
 let regLog = document.getElementById('regLog');
-regLog.addEventListener('change', ()=>{
+regLog.addEventListener('change', async function(){
+    await fetch('logReg.php?log='+regLog.value).then(response=>{
+        return response.text();
+    }).then(text=>{
+        console.log(text);
+        if(text == 1){
+            console.log(regLog);
+            regLog.classList.remove('valid');
+            regLog.classList.add('noValid');
+            regLog.title="Данный логин уже используется";
+        }else{
+            if(/[A-Za-z,-]/g.test(regLog.value)){
+                console.log('Idiot');
+                regLog.classList.add('valid');
+                regLog.classList.remove('noValid');  
+                regLog.title="Всё в порядке";
+            }else{
+                regLog.classList.remove('valid');
+                regLog.classList.add('noValid');
+                regLog.title="Некорректные символы";
+            }
+            if(regLog.value.length==0){
+                regLog.classList.add('valid');
+                regLog.classList.remove('noValid');
+                regLog.title="Введите логин";
+            }
+        }
+    });
     
 });
-fetch('')
-    .then((response) => response.json())
-    .then((data)=> data)
-console.log(data);
-console.log(response);
 //Быстрая проверка

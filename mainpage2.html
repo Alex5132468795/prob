@@ -1,30 +1,30 @@
 </header>
 <dialog id="registration" close>
-    <form class="Regist" action="">
+    <form class="Regist" method="post" action="insert.php">
         <label for="">
             ФИО
         </label>
-        <input class="inputForm" type="text" pattern="[А-ЯЁа-яё ]{0,30}">
+        <input required name="fio" class="inputForm" title="Введите Фамилию Имя Отчество используя кириллицу" type="text" pattern="[А-ЯЁа-яё ]{0,30}">
         <label for="">
             Логин
         </label>
-        <input id="regLog" class="inputForm" type="text" pattern="[A-Za-z,-]{0,20}">
+        <input required name="login" id="regLog" title="Введите логин" class="" type="text" >
         <label for="">
             Email
         </label>
-        <input class="inputForm" type="email">
+        <input required name="email" class="inputForm" title="Введите адресс электронной почты" type="email">
         <label for="">
             Пароль
         </label>
-        <input  class="inputForm RegPas" type="password">
+        <input required name="password" class="inputForm RegPas" title="Введите пароль" type="password">
         <label for="">
             Повтор пароля
         </label>
-        <input class="RegPasRet" type="password">
-        <label  for="">
+        <input required class="RegPasRet" title="Введите повтор пороля" type="password">
+        <label for="">
             Согласие на обработку персональных данных
         </label>
-        <input type="checkbox" checked>  
+        <input required type="checkbox" checked>  
         <div class="formButton">
             <input type="submit">
             <input class="closeForm" type="button" value="назад">
